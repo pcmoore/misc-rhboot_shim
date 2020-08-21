@@ -110,7 +110,7 @@ ifeq ($(ARCH),arm)
 endif
 
 FORMAT		?= --target efi-app-$(ARCH)
-EFI_PATH	?= $(LIBDIR)/gnuefi
+EFI_PATH	?= $(shell dirname `find /usr -name "crt0-efi-x86_64.o" 2> /dev/null | head -n 1`)
 
 MMSTEM		?= mm$(ARCH_SUFFIX)
 MMNAME		= $(MMSTEM).efi

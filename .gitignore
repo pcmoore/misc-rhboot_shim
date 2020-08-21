@@ -4,6 +4,7 @@ shim_cert.h
 *.a
 *.CSV
 *.cer
+*.der
 *.crl
 *.crt
 *.csr
